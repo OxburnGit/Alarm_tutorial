@@ -1,0 +1,12 @@
+Name: Model
+Type: ModelCategoryFolder
+Children:
+- Name: TemperatureAlarmVariable
+  Type: BaseDataVariableType
+  DataType: Int32
+- Name: ErrorAlarmVariable
+  Type: BaseDataVariableType
+  DataType: Boolean
+- Name: WarningAlarmVariable
+  Type: BaseDataVariableType
+  DataType: Boolean

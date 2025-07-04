@@ -1,0 +1,229 @@
+Name: Alarms
+Id: g=3293e7cd8de0bb06cc725e017a984470
+Type: AlarmsCategoryFolder
+Children:
+- Name: TemperatureAlarm
+  Id: g=0e85ba359e3437953a773189d3f137e6
+  Type: ExclusiveLevelAlarmController
+  Children:
+  - Name: InputValue
+    Id: g=81efe871ad0a6076dd466916dac5791e
+    Type: BaseDataVariableType
+    DataType: Double
+    Children:
+    - Name: DynamicLink
+      Id: g=2324ae399f5df7f427071f325e7ed112
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "../../../Model/TemperatureAlarmVariable"
+      Children:
+      - Name: Mode
+        Id: g=1b1b17cec58f7378f5312afea3c71655
+        Type: BaseVariableType
+        DataType: DynamicLinkMode
+        Value: 2
+  - Name: LastEvent
+    Id: g=ee23aba1c6a24286d0ad0149ea32b125
+    Type: BaseDataVariableType
+    DataType: BaseDataType
+    ValueRank: OneDimension
+    ArrayDimensions: [0]
+  - Class: Reference
+    Target: ns=19;i=81
+    Direction: Forward
+  - Class: Reference
+    Target: ns=19;i=82
+    Direction: Forward
+  - Class: Reference
+    Target: ns=19;i=83
+    Direction: Forward
+  - Class: Reference
+    Target: ns=19;i=130
+    Direction: Forward
+  - Class: Reference
+    Target: ns=19;i=135
+    Direction: Forward
+  - Class: Reference
+    Target: ns=19;i=132
+    Direction: Forward
+  - Class: Reference
+    Target: ns=19;i=146
+    Direction: Forward
+  - Class: Reference
+    Target: ns=19;i=148
+    Direction: Forward
+  - Class: Reference
+    Target: ns=19;i=150
+    Direction: Forward
+  - Class: Reference
+    Target: ns=19;i=152
+    Direction: Forward
+  - Class: Reference
+    Target: ns=19;i=154
+    Direction: Forward
+  - Name: HighLimit
+    Id: g=8af06c69281fb39dc9e652cd7ecf0dab
+    Type: BaseDataVariableType
+    DataType: Double
+    Value: 75.0
+  - Name: AutoConfirm
+    Id: g=1e0ef98249c86290455dfc4a0398d17b
+    Type: BaseDataVariableType
+    DataType: Boolean
+    Value: true
+  - Name: Message
+    Id: g=bc11c25eb6402910233f68731b99c1d4
+    Type: BaseDataVariableType
+    DataType: LocalizedText
+    Children:
+    - Name: HighStateMessage
+      Id: g=7d2a8e9cfc107d5c7b2b7cfca31e5e60
+      Type: BaseDataVariableType
+      DataType: LocalizedText
+      Value: {"LocaleId":"en-US","Text":"Temperature exceeds a safe level!"}
+  - Name: Severity
+    Id: g=871da8c9a7fb141e2045c867997e12da
+    Type: BaseDataVariableType
+    DataType: UInt16
+    Value: 3
+- Name: ErrorAlarm
+  Id: g=557e1e8fedf7509c367ca483278e13e9
+  Type: OffNormalAlarmController
+  Children:
+  - Name: NormalStateValue
+    Id: g=13c39d0e2d6efe605e5dcf93b584551d
+    Type: BaseDataVariableType
+    DataType: Double
+  - Name: InputValue
+    Id: g=56d353722937a30987a633cba45dc659
+    Type: BaseDataVariableType
+    DataType: Double
+    Children:
+    - Name: DynamicLink
+      Id: g=166bc3e66107eb7f35d5d66ead705b73
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "../../../Model/ErrorAlarmVariable"
+      Children:
+      - Name: Mode
+        Id: g=f259de0de174d69c91c9d2e486197ca4
+        Type: BaseVariableType
+        DataType: DynamicLinkMode
+        Value: 2
+  - Name: LastEvent
+    Id: g=e53b17982179313516987e5b6a306292
+    Type: BaseDataVariableType
+    DataType: BaseDataType
+    ValueRank: OneDimension
+    ArrayDimensions: [0]
+  - Class: Reference
+    Target: ns=19;i=81
+    Direction: Forward
+  - Class: Reference
+    Target: ns=19;i=82
+    Direction: Forward
+  - Class: Reference
+    Target: ns=19;i=83
+    Direction: Forward
+  - Class: Reference
+    Target: ns=19;i=130
+    Direction: Forward
+  - Class: Reference
+    Target: ns=19;i=135
+    Direction: Forward
+  - Class: Reference
+    Target: ns=19;i=132
+    Direction: Forward
+  - Class: Reference
+    Target: ns=19;i=146
+    Direction: Forward
+  - Class: Reference
+    Target: ns=19;i=148
+    Direction: Forward
+  - Class: Reference
+    Target: ns=19;i=150
+    Direction: Forward
+  - Class: Reference
+    Target: ns=19;i=152
+    Direction: Forward
+  - Class: Reference
+    Target: ns=19;i=154
+    Direction: Forward
+  - Name: Message
+    Id: g=0958e3826f85985ffd206b67d1161cd9
+    Type: BaseDataVariableType
+    DataType: LocalizedText
+    Value: {"LocaleId":"en-US","Text":"Serious system malfunction"}
+- Name: WarningAlarm
+  Id: g=d5a4473e35e2832b20a44736ffdfbab8
+  Type: OffNormalAlarmController
+  Children:
+  - Name: NormalStateValue
+    Id: g=b4bc11279fcd34c0128ad25800eaedb9
+    Type: BaseDataVariableType
+    DataType: Double
+  - Name: InputValue
+    Id: g=a6db8672684d8b1f11e17926754ecdde
+    Type: BaseDataVariableType
+    DataType: Double
+    Children:
+    - Name: DynamicLink
+      Id: g=2510e98ddf993984837dd087b0742a5d
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "../../../Model/WarningAlarmVariable"
+      Children:
+      - Name: Mode
+        Id: g=3578820cf635cd099292cce02cd0cf59
+        Type: BaseVariableType
+        DataType: DynamicLinkMode
+        Value: 2
+  - Name: LastEvent
+    Id: g=6b9b9595d9bdf88161bdb529111d02a3
+    Type: BaseDataVariableType
+    DataType: BaseDataType
+    ValueRank: OneDimension
+    ArrayDimensions: [0]
+  - Class: Reference
+    Target: ns=19;i=81
+    Direction: Forward
+  - Class: Reference
+    Target: ns=19;i=82
+    Direction: Forward
+  - Class: Reference
+    Target: ns=19;i=83
+    Direction: Forward
+  - Class: Reference
+    Target: ns=19;i=130
+    Direction: Forward
+  - Class: Reference
+    Target: ns=19;i=135
+    Direction: Forward
+  - Class: Reference
+    Target: ns=19;i=132
+    Direction: Forward
+  - Class: Reference
+    Target: ns=19;i=146
+    Direction: Forward
+  - Class: Reference
+    Target: ns=19;i=148
+    Direction: Forward
+  - Class: Reference
+    Target: ns=19;i=150
+    Direction: Forward
+  - Class: Reference
+    Target: ns=19;i=152
+    Direction: Forward
+  - Class: Reference
+    Target: ns=19;i=154
+    Direction: Forward
+  - Name: Message
+    Id: g=aeede3b17b24cf91906c3529bdc89527
+    Type: BaseDataVariableType
+    DataType: LocalizedText
+    Value: {"LocaleId":"en-US","Text":"A module was not initialized correctly"}
+  - Name: Severity
+    Id: g=3871f52045eabee5ba103c3453a5323b
+    Type: BaseDataVariableType
+    DataType: UInt16
+    Value: 2
